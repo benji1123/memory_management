@@ -123,18 +123,16 @@ void status(){
 
 
 int main(void) {
-  // predefined null-block used for unallocated slots
   _nullBlock.val = EMPTY_SLOT_VALUE;
   _nullBlock.firstSlot = 0;
   _nullBlock.lastSlot = 0;
-
+    
   fillEmptyMemory();
-  int kill = 100;
   status();
-  printf("%d NUM PROCESSES: ", NUM_PROCESSES);
-  printf("\n\n");
-  releasePercent(0.5);
-  compact();
+  printf("NUM PROCESSES: %d", NUM_PROCESSES);
+  printf("\n\n=====================================\n\n");
+  releasePercent(0.1);
   status();
-  printf("%d NUM PROCESSES: ", NUM_PROCESSES);
+  printf("\n\n=====================================\n\n");
+  printf("NUM PROCESSES: %d ", NUM_PROCESSES);
 }
